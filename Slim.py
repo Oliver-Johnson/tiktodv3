@@ -181,32 +181,38 @@ clear()
 
 print(pyfiglet.figlet_format("TIKTOD V3", font="slant"))
 print("Log:")
+try: 
+    if auto == 1:
+        driver.get("https://zefoy.com/")
 
-if auto == 1:
-    driver.get("https://zefoy.com/")
+        loop1()
+
+    elif auto == 2:
+        driver.get("https://zefoy.com/")
+
+        loop2()
+
+    elif auto == 3:
+        driver.get("https://zefoy.com/")
+
+        loop3()
+
+    elif auto == 4:
+        driver.get("https://zefoy.com/")
+
+        loop4()
+
+    elif auto == 5:
+        print("[+] This program was created by @kangoka. [github.com/kangoka]")
+        print("[+] This program was origionally uploaded to github.com/kangoka/tiktodv3.")
+        print("[+] This program was majorly improved by @XxBi1a. [github.com/XxB1a]")
+        print("[+] This version was modified by Oliver Johnson. [github.com/Oliver-Johnson]")
+
+    else:
+        print(f"{auto} is not a valid option. Please pick 1, 2, 3, 4 or 5")
+        
+except Exception as e:
+    print(e)
+    while True:
+        continue
     
-    loop1()
-    
-elif auto == 2:
-    driver.get("https://zefoy.com/")
-    
-    loop2()
-    
-elif auto == 3:
-    driver.get("https://zefoy.com/")
-    
-    loop3()
-    
-elif auto == 4:
-    driver.get("https://zefoy.com/")
-    
-    loop4()
-    
-elif auto == 5:
-    print("[+] This program was created by @kangoka. [github.com/kangoka]")
-    print("[+] This program was origionally uploaded to github.com/kangoka/tiktodv3.")
-    print("[+] This program was majorly improved by @XxBi1a. [github.com/XxB1a]")
-    print("[+] This version was modified by Oliver Johnson. [github.com/Oliver-Johnson]")
-    
-else:
-    print(f"{auto} is not a valid option. Please pick 1, 2, 3, 4 or 5")
