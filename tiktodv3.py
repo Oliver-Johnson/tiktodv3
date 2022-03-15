@@ -91,7 +91,7 @@ def loop1():
         
         driver.refresh()
         Views += 1000
-        print("[+] Views sended!")
+        print("[+] Views sent!")
         
         sleep(300)
         loop1()
@@ -127,7 +127,7 @@ def loop2():
         hearts = driver.find_element_by_xpath('//*[@id="c2VuZE9nb2xsb3dlcnNfdGlrdG9r"]/span').text.split()
         
         Hearts += int(hearts[0])
-        print("[+] Hearts sended!")
+        print("[+] Hearts sent!")
         
         sleep(5)
         driver.refresh()
@@ -165,7 +165,7 @@ def loop3():
         folls = driver.find_element_by_xpath('//*[@id="c2VuZF9mb2xsb3dlcnNfdGlrdG9r"]/span').text.split()
         
         Followers += int(folls[0])
-        print("[+] Followers sended!")
+        print("[+] Followers sent!")
         driver.refresh()
         
         sleep(1800)
@@ -200,7 +200,7 @@ def loop4():
         
         driver.refresh()
         Shares += 100
-        print("[+] Shares sended!")
+        print("[+] Shares sent!")
         
         sleep(300)
         loop4()
