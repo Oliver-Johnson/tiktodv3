@@ -60,7 +60,7 @@ def loop1():
         driver.refresh()
         Views += 1000
         print("[+] Views sent!")
-        
+        print(f"Next @ {strftime('%H:%M:%S',gmtime(time()+300))}")
         sleep(300)
         loop1()
         
@@ -99,7 +99,7 @@ def loop2():
         
         sleep(5)
         driver.refresh()
-        
+        print(f"Next @ {strftime('%H:%M:%S',gmtime(time()+1800))}")
         sleep(1800)
         loop2()
         
@@ -114,6 +114,7 @@ def loop3():
     
     try:
         driver.find_element_by_xpath("/html/body/div[4]/div[1]/div[3]/div/div[1]/div/button").click()
+        
         
     except:
         print("[-] The captcha is unsolved!")
@@ -135,7 +136,7 @@ def loop3():
         Followers += int(folls[0])
         print("[+] Followers sent!")
         driver.refresh()
-        
+        print(f"Next @ {strftime('%H:%M:%S',gmtime(time()+1800))}")
         sleep(1800)
         loop3()
         
@@ -165,11 +166,12 @@ def loop4():
         
         sleep(5)
         driver.find_element_by_xpath("//*[@id=\"c2VuZC9mb2xsb3dlcnNfdGlrdG9s\"]/div[1]/div/form/button").click()
+        sleep(4)
         
         driver.refresh()
         Shares += 100
         print("[+] Shares sent!")
-        
+        print(f"Next @ {strftime('%H:%M:%S',gmtime(time()+300))}")
         sleep(300)
         loop4()
         
@@ -182,38 +184,32 @@ clear()
 
 print(pyfiglet.figlet_format("TIKTOD V3", font="slant"))
 print("Log:")
-try: 
-    if auto == 1:
-        driver.get("https://zefoy.com/")
 
-        loop1()
-
-    elif auto == 2:
-        driver.get("https://zefoy.com/")
-
-        loop2()
-
-    elif auto == 3:
-        driver.get("https://zefoy.com/")
-
-        loop3()
-
-    elif auto == 4:
-        driver.get("https://zefoy.com/")
-
-        loop4()
-
-    elif auto == 5:
-        print("[+] This program was created by @kangoka. [github.com/kangoka]")
-        print("[+] This program was origionally uploaded to github.com/kangoka/tiktodv3.")
-        print("[+] This program was majorly improved by @XxBi1a. [github.com/XxB1a]")
-        print("[+] This version was modified by Oliver Johnson. [github.com/Oliver-Johnson]")
-
-    else:
-        print(f"{auto} is not a valid option. Please pick 1, 2, 3, 4 or 5")
-        
-except Exception as e:
-    print(e)
-    while True:
-        continue
+if auto == 1:
+    driver.get("https://zefoy.com/")
     
+    loop1()
+    
+elif auto == 2:
+    driver.get("https://zefoy.com/")
+    
+    loop2()
+    
+elif auto == 3:
+    driver.get("https://zefoy.com/")
+    
+    loop3()
+    
+elif auto == 4:
+    driver.get("https://zefoy.com/")
+    
+    loop4()
+    
+elif auto == 5:
+    print("[+] This program was created by @kangoka. [github.com/kangoka]")
+    print("[+] This program was origionally uploaded to github.com/kangoka/tiktodv3.")
+    print("[+] This program was majorly improved by @XxBi1a. [github.com/XxB1a]")
+    print("[+] This version was modified by Oliver Johnson. [github.com/Oliver-Johnson]")
+    
+else:
+    print(f"{auto} is not a valid option. Please pick 1, 2, 3, 4 or 5")
